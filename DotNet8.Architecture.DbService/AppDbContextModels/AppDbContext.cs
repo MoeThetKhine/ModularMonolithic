@@ -240,6 +240,8 @@ public partial class AppDbContext : DbContext
 
 		#endregion
 
+		#region TaskCategory
+
 		modelBuilder.Entity<TaskCategory>(entity =>
         {
             entity.HasKey(e => e.CategoryId).HasName("PK__TaskCate__19093A2B739DC4B2");
@@ -252,7 +254,9 @@ public partial class AppDbContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<TblBlog>(entity =>
+		#endregion
+
+		modelBuilder.Entity<TblBlog>(entity =>
         {
             entity.HasKey(e => e.BlogId);
 
