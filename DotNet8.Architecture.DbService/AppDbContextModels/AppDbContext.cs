@@ -218,6 +218,8 @@ public partial class AppDbContext : DbContext
 
 		#endregion
 
+		#region State
+
 		modelBuilder.Entity<State>(entity =>
         {
             entity.HasKey(e => new { e.JobId, e.Id }).HasName("PK_HangFire_State");
@@ -236,7 +238,9 @@ public partial class AppDbContext : DbContext
                 .HasConstraintName("FK_HangFire_State_Job");
         });
 
-        modelBuilder.Entity<TaskCategory>(entity =>
+		#endregion
+
+		modelBuilder.Entity<TaskCategory>(entity =>
         {
             entity.HasKey(e => e.CategoryId).HasName("PK__TaskCate__19093A2B739DC4B2");
 
