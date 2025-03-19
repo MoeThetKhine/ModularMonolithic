@@ -26,6 +26,8 @@ namespace DotNet8.Architecture.Extension
 
 		#endregion
 
+		#region ToEntity
+
 		public static TblBlog ToEntity(this BlogRequestModel model)
 		{
 			return new TblBlog
@@ -35,5 +37,7 @@ namespace DotNet8.Architecture.Extension
 				BlogContent = model.BlogContent
 			};
 		}
+
+		#endregion
 	}
 }
