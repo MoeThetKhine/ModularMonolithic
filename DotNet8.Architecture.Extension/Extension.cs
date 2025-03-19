@@ -1,7 +1,4 @@
-﻿using DotNet8.Architecture.DbService.AppDbContextModels;
-using DotNet8.Architecture.DTOs.Feature.Blog;
-
-namespace DotNet8.Architecture.Extension;
+﻿namespace DotNet8.Architecture.Extension;
 
 public static class Extension
 {
