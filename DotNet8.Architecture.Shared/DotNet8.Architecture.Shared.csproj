@@ -5,5 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+	
+	 <ItemGroup>
+	  <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet8.Architecture.DTOs\DotNet8.Architecture.DTOs.csproj" />
+  </ItemGroup>
 
 </Project>
