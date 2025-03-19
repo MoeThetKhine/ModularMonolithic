@@ -53,6 +53,8 @@ public partial class AppDbContext : DbContext
 
 	#endregion
 
+	#region OnModelCreating
+
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 		#region AggregatedCounter
@@ -304,5 +306,7 @@ public partial class AppDbContext : DbContext
 		OnModelCreatingPartial(modelBuilder);
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+	#endregion
+
+	partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
