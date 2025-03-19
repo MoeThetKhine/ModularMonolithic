@@ -55,7 +55,9 @@ public partial class AppDbContext : DbContext
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<AggregatedCounter>(entity =>
+		#region AggregatedCounter
+
+		modelBuilder.Entity<AggregatedCounter>(entity =>
         {
             entity.HasKey(e => e.Key).HasName("PK_HangFire_CounterAggregated");
 
@@ -67,7 +69,9 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.ExpireAt).HasColumnType("datetime");
         });
 
-        modelBuilder.Entity<Counter>(entity =>
+		#endregion
+
+		modelBuilder.Entity<Counter>(entity =>
         {
             entity.HasKey(e => new { e.Key, e.Id }).HasName("PK_HangFire_Counter");
 
