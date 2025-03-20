@@ -12,6 +12,8 @@ namespace DotNet8.Architecture.Shared
 	public class BlogValidator : AbstractValidator<BlogRequestModel>
 	{
 
+		#region BlogValidator
+
 		public BlogValidator()
 		{
 			RuleFor(x => x.BlogTitle)
@@ -26,5 +28,7 @@ namespace DotNet8.Architecture.Shared
 			  .NotEmpty().WithMessage("Blog Content cannot be empty.")
 			  .NotNull().WithMessage("Blog Content cannot be null.");
 		}
+
+		#endregion
 	}
 }
