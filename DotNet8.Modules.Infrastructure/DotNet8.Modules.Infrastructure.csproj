@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet8.Architecture.DbService\DotNet8.Architecture.DbService.csproj" />
+    <ProjectReference Include="..\DotNet8.Architecture.Extension\DotNet8.Architecture.Extension.csproj" />
+    <ProjectReference Include="..\DotNet8.Architecture.Shared\DotNet8.Architecture.Shared.csproj" />
+    <ProjectReference Include="..\DotNet8.Modules.Domain\DotNet8.Modules.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
