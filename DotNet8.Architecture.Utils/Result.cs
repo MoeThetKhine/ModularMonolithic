@@ -10,11 +10,11 @@ namespace DotNet8.Architecture.Utils
 	public class Result<T>
 	{
 		public T Data { get; set; }
-		public string Message {  get; set; }
-		public bool IsSuccess {  get; set; }
+		public string Message { get; set; }
+		public bool IsSuccess { get; set; }
 		public EnumStatusCode StatusCode { get; set; }
 
-		public static Result<T> Success (string message = "Success", EnumStatusCode statusCode = EnumStatusCode.Success)
+		public static Result<T> Success(string message = "Success", EnumStatusCode statusCode = EnumStatusCode.Success)
 		{
 			return new Result<T>
 			{
@@ -46,6 +46,16 @@ namespace DotNet8.Architecture.Utils
 		}
 
 		public static Result<T> UpdateSuccess(string message = "Update Successful.", EnumStatusCode statusCode = EnumStatusCode.Success)
+		{
+			return new Result<T>
+			{
+				IsSuccess = true,
+				Message = message,
+				StatusCode = statusCode
+			};
+		}
+
+		public static Result<T> DeleteSuccess(string message = "Delete Successful.", EnumStatusCode statusCode = EnumStatusCode.Success)
 		{
 			return new Result<T>
 			{
