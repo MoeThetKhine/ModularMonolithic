@@ -84,5 +84,15 @@ namespace DotNet8.Architecture.Utils
 				StatusCode = EnumStatusCode.InternalServerError
 			};
 		}
+
+		public static Result<T> NotFound(string message = "No Data Found.", EnumStatusCode statusCode = EnumStatusCode.NotFound)
+		{
+			return new Result<T>
+			{
+				IsSuccess = false,
+				Message = message,
+				StatusCode = statusCode
+			};
+		}
 	}
 }
