@@ -1,7 +1,4 @@
-﻿using DotNet8.Architecture.DTOs.Feature.Blog;
-using FluentValidation;
-
-namespace DotNet8.Architecture.Shared;
+﻿namespace DotNet8.Architecture.Shared;
 
 public class BlogValidator : AbstractValidator<BlogRequestModel>
 {
