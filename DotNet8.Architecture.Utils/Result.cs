@@ -1,6 +1,4 @@
-﻿using DotNet8.Architecture.Utils.Enums;
-
-namespace DotNet8.Architecture.Utils;
+﻿namespace DotNet8.Architecture.Utils;
 
 #region Result
 
