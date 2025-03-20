@@ -11,4 +11,11 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\DotNet8.Architecture.DTOs\DotNet8.Architecture.DTOs.csproj" />
+	  <ProjectReference Include="..\DotNet8.Architecture.Shared\DotNet8.Architecture.Shared.csproj" />
+	  <ProjectReference Include="..\DotNet8.Architecture.Utils\DotNet8.Architecture.Utils.csproj" />
+	  <ProjectReference Include="..\DotNet8.Modules.Domain\DotNet8.Modules.Domain.csproj" />
+	</ItemGroup>
+
 </Project>
