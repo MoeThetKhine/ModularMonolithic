@@ -24,6 +24,12 @@ namespace DotNet8.Modules.Presentation.Extensions
 		{
 			return services.AddScoped<IBlogRepository, BlogRepository>();
 		}
+
+		public static IServiceCollection AddDependencyInjection(this IServiceCollection services, WebApplicationBuilder builder)
+		{
+			return services.AddDbContextService(builder)
+				.AddRepositoryService();
+		}
 	}
 
 }
