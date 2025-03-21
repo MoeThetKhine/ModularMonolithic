@@ -1,4 +1,6 @@
-﻿namespace DotNet8.Modules.Infrastructure.Features.Blog;
+﻿using DotNet8.Architecture.Extension;
+
+namespace DotNet8.Modules.Infrastructure.Features.Blog;
 
 public class BlogRepository : IBlogRepository
 {
@@ -82,6 +84,26 @@ public class BlogRepository : IBlogRepository
 		}
 
 	result:
+		return result;
+	}
+
+	public async Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequestModel, CancellationToken cancellationToken)
+	{
+		Result<BlogModel> result;
+
+		try
+		{
+			await _context.TblBlogs.AddAsync(blogRequestModel.ToEntity(), cancellationToken);
+			await _context.SaveChangesAsync(cancellationToken);
+
+			result = Result<BlogModel>.Success();
+		}
+
+		catch (Exception ex)
+		{
+			result = Result<BlogModel>.Failure(ex);
+		}
+
 		return result;
 	}
 
