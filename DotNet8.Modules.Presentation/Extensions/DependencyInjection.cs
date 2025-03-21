@@ -7,6 +7,8 @@ namespace DotNet8.Modules.Presentation.Extensions;
 
 public static class DependencyInjection
 {
+	#region AddDbContextServices
+
 	private static IServiceCollection AddDbContextServices(this  IServiceCollection services, WebApplicationBuilder builder)
 	{
 		builder.Services.AddDbContext<AppDbContext>(
@@ -21,6 +23,8 @@ public static class DependencyInjection
 
 		return services;
 	}
+
+	#endregion
 
 	private static IServiceCollection AddRepositoryService(this IServiceCollection services)
 	{
