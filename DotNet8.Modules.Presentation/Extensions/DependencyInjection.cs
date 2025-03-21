@@ -1,6 +1,23 @@
-﻿namespace DotNet8.Modules.Presentation.Extensions
+﻿using DotNet8.Architecture.DbService.AppDbContextModels;
+using Microsoft.EntityFrameworkCore;
+
+namespace DotNet8.Modules.Presentation.Extensions
 {
-	public class DependencyInjection
+	public static class DependencyInjection
 	{
+		private static IServiceCollection AddDbContextSerices(this  IServiceCollection services, WebApplicationBuilder builder)
+		{
+			builder.Services.AddDbContext<AppDbContext>(
+			opt =>
+			{
+				opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+				opt.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+			},
+			ServiceLifetime.Transient,
+			ServiceLifetime.Transient
+			);
+
+			return services;
+		}
 	}
 }
