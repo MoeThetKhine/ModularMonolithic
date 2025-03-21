@@ -1,5 +1,4 @@
 ﻿using DotNet8.Architecture.Shared;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet8.Modules.Presentation.Controllers
