@@ -1,6 +1,5 @@
-﻿namespace DotNet8.Modules.Application.Features.Blog.CreateBlog
+﻿namespace DotNet8.Modules.Application.Features.Blog.CreateBlog;
+
+internal class CreateBlogCommandHandler
 {
-	internal class CreateBlogCommandHandler
-	{
-	}
 }
