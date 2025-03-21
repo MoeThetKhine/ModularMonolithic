@@ -1,11 +1,13 @@
 ﻿using DotNet8.Architecture.DbService.AppDbContextModels;
+using DotNet8.Modules.Domain.Features.Blog;
+using DotNet8.Modules.Infrastructure.Features.Blog;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotNet8.Modules.Presentation.Extensions
 {
 	public static class DependencyInjection
 	{
-		private static IServiceCollection AddDbContextSerices(this  IServiceCollection services, WebApplicationBuilder builder)
+		private static IServiceCollection AddDbContextServices(this  IServiceCollection services, WebApplicationBuilder builder)
 		{
 			builder.Services.AddDbContext<AppDbContext>(
 			opt =>
@@ -27,7 +29,7 @@ namespace DotNet8.Modules.Presentation.Extensions
 
 		public static IServiceCollection AddDependencyInjection(this IServiceCollection services, WebApplicationBuilder builder)
 		{
-			return services.AddDbContextService(builder)
+			return services.AddDbContextServices(builder)
 				.AddRepositoryService();
 		}
 	}
