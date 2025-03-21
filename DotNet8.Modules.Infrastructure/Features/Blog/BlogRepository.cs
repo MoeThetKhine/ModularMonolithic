@@ -1,7 +1,7 @@
-﻿using DotNet8.Architecture.DbService.AppDbContextModels;
-using DotNet8.Architecture.DTOs.Feature.Blog;
-using DotNet8.Architecture.Utils;
-using DotNet8.Modules.Domain.Features.Blog;
+﻿global using DotNet8.Architecture.DbService.AppDbContextModels;
+global using DotNet8.Architecture.DTOs.Feature.Blog;
+global using DotNet8.Architecture.Utils;
+global using DotNet8.Modules.Domain.Features.Blog;
 
 namespace DotNet8.Modules.Infrastructure.Features.Blog;
 
