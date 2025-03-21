@@ -1,4 +1,7 @@
-﻿namespace DotNet8.Modules.Presentation.Controllers.Blog;
+﻿using DotNet8.Architecture.DTOs.Feature.Blog;
+using DotNet8.Modules.Application.Features.Blog.CreateBlog;
+
+namespace DotNet8.Modules.Presentation.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -36,6 +39,15 @@ public class BlogController : BaseController
 	}
 
 	#endregion
+
+	[HttpPost]
+	public async Task<IActionResult> CreateBlog([FromBody] BlogRequestModel requestModel, CancellationToken cancellationToken)
+	{
+		var command = new CreateBlogCommand(requestModel); ;
+		var result = await _mediator.Send(command, cancellationToken);
+
+		return Content(result);
+	}
 
 
 }
