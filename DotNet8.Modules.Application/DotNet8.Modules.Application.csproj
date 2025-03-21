@@ -18,8 +18,4 @@
 	  <ProjectReference Include="..\DotNet8.Modules.Domain\DotNet8.Modules.Domain.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Features\" />
-	</ItemGroup>
-
 </Project>
