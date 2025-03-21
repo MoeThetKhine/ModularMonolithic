@@ -35,9 +35,13 @@ public static class DependencyInjection
 
 	#endregion
 
+	#region AddDependencyInjection
+
 	public static IServiceCollection AddDependencyInjection(this IServiceCollection services, WebApplicationBuilder builder)
 	{
 		return services.AddDbContextServices(builder)
 			.AddRepositoryService();
 	}
+
+	#endregion
 }
