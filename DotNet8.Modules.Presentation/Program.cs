@@ -1,6 +1,3 @@
-using DotNet8.Modules.Presentation.Extensions;
-using DotNet8.Modules.Application.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();

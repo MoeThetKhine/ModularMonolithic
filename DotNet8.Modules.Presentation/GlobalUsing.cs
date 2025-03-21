@@ -4,3 +4,5 @@ global using DotNet8.Architecture.DbService.AppDbContextModels;
 global using DotNet8.Modules.Domain.Features.Blog;
 global using DotNet8.Modules.Infrastructure.Features.Blog;
 global using Microsoft.EntityFrameworkCore;
+global using DotNet8.Modules.Presentation.Extensions;
+global using DotNet8.Modules.Application.Extensions;
