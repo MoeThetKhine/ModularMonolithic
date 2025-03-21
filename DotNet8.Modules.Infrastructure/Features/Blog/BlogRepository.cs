@@ -91,6 +91,8 @@ public class BlogRepository : IBlogRepository
 
 	#endregion
 
+	#region CreateBlogAsync
+
 	public async Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequestModel, CancellationToken cancellationToken)
 	{
 		Result<BlogModel> result;
@@ -110,5 +112,7 @@ public class BlogRepository : IBlogRepository
 
 		return result;
 	}
+
+	#endregion
 
 }
