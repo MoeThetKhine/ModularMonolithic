@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DotNet8.Architecture.Shared;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet8.Modules.Presentation.Controllers
@@ -7,5 +8,9 @@ namespace DotNet8.Modules.Presentation.Controllers
 	[ApiController]
 	public class BaseController : ControllerBase
 	{
+		protected IActionResult Content(object obj)
+		{
+			return Content(obj.ToJson(), "application/json");
+		}
 	}
 }
