@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DotNet8.Modules.Domain.Features.Blog
 {
+
+	#region Tbl_Blog
+
 	public class Tbl_Blog
 	{
 		[Key]
@@ -20,4 +23,6 @@ namespace DotNet8.Modules.Domain.Features.Blog
 
 		public bool? DeleteFlag { get; set; }
 	}
+
+	#endregion
 }
