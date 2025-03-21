@@ -1,4 +1,6 @@
-﻿namespace DotNet8.Modules.Presentation.Controllers.Blog;
+﻿using DotNet8.Modules.Application.Features.Blog.GetBlogById;
+
+namespace DotNet8.Modules.Presentation.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -23,5 +25,15 @@ public class BlogController : BaseController
 	}
 
 	#endregion
+
+	[HttpGet("{id}")]
+	public async Task<IActionResult>GetBlogById(int id,CancellationToken cancellationToken)
+	{
+		var query = new GetBlogByIdQuery(id);
+		var result = await _mediator.Send(query, cancellationToken);
+
+		return Content(result);
+	}
+
 
 }
