@@ -3,20 +3,19 @@ using DotNet8.Architecture.DTOs.Feature.Blog;
 using DotNet8.Architecture.Utils;
 using DotNet8.Modules.Domain.Features.Blog;
 
-namespace DotNet8.Modules.Infrastructure.Features.Blog
+namespace DotNet8.Modules.Infrastructure.Features.Blog;
+
+public class BlogRepository : IBlogRepository
 {
-	public class BlogRepository : IBlogRepository
+	private readonly AppDbContext _context;
+
+	public BlogRepository(AppDbContext context)
 	{
-		private readonly AppDbContext _context;
+		_context = context;
+	}
 
-		public BlogRepository(AppDbContext context)
-		{
-			_context = context;
-		}
-
-		public Task<Result<BlogListModelV1>> GetBlogsAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
-		{
-			throw new NotImplementedException();
-		}
+	public Task<Result<BlogListModelV1>> GetBlogsAsync(int pageNo, int pageSize, CancellationToken cancellationToken)
+	{
+		throw new NotImplementedException();
 	}
 }
