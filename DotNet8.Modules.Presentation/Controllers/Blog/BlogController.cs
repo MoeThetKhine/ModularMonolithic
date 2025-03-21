@@ -1,7 +1,4 @@
-﻿using DotNet8.Modules.Application.Features.Blog.GetBlogList;
-using MediatR;
-
-namespace DotNet8.Modules.Presentation.Controllers.Blog;
+﻿namespace DotNet8.Modules.Presentation.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
