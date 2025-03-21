@@ -1,6 +1,5 @@
-﻿namespace DotNet8.Modules.Application.Features.Blog.GetBlogById
+﻿namespace DotNet8.Modules.Application.Features.Blog.GetBlogById;
+
+internal class GetBlogByIdQueryHandler
 {
-	internal class GetBlogByIdQueryHandler
-	{
-	}
 }
