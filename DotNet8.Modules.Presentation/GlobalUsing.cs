@@ -8,3 +8,5 @@ global using DotNet8.Modules.Presentation.Extensions;
 global using DotNet8.Modules.Application.Extensions;
 global using DotNet8.Modules.Application.Features.Blog.GetBlogList;
 global using MediatR;
+global using DotNet8.Architecture.DTOs.Feature.Blog;
+global using DotNet8.Modules.Application.Features.Blog.CreateBlog;
