@@ -1,9 +1,4 @@
-﻿using DotNet8.Architecture.DbService.AppDbContextModels;
-using DotNet8.Modules.Domain.Features.Blog;
-using DotNet8.Modules.Infrastructure.Features.Blog;
-using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8.Modules.Presentation.Extensions;
+﻿namespace DotNet8.Modules.Presentation.Extensions;
 
 public static class DependencyInjection
 {
