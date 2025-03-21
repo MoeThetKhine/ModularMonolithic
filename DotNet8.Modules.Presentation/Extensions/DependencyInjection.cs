@@ -19,5 +19,11 @@ namespace DotNet8.Modules.Presentation.Extensions
 
 			return services;
 		}
+
+		private static IServiceCollection AddRepositoryService(this IServiceCollection services)
+		{
+			return services.AddScoped<IBlogRepository, BlogRepository>();
+		}
 	}
+
 }
