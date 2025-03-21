@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DotNet8.Architecture.DbService\DotNet8.Architecture.DbService.csproj" />
     <ProjectReference Include="..\DotNet8.Modules.Application\DotNet8.Modules.Application.csproj" />
     <ProjectReference Include="..\DotNet8.Modules.Infrastructure\DotNet8.Modules.Infrastructure.csproj" />
