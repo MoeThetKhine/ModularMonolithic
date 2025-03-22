@@ -163,6 +163,8 @@ public class BlogRepository : IBlogRepository
 				goto result;
 			}
 
+			#region Validation
+
 			if (!requestModel.BlogTitle.IsNullOrEmpty())
 			{
 				blog.BlogTitle = requestModel.BlogTitle;
@@ -176,6 +178,8 @@ public class BlogRepository : IBlogRepository
 			{
 				blog.BlogContent = requestModel.BlogContent;
 			}
+
+			#endregion
 
 			_context.TblBlogs.Update(blog);
 			await _context.SaveChangesAsync(cancellationToken);
