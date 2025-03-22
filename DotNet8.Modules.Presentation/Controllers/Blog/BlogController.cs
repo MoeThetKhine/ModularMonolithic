@@ -77,6 +77,8 @@ public class BlogController : BaseController
 
 	#endregion
 
+	#region DeleteBlog
+
 	[HttpDelete("{id}")]
 	public async Task<IActionResult> DeleteBlog(int id, CancellationToken cancellationToken)
 	{
@@ -85,4 +87,5 @@ public class BlogController : BaseController
 		return Content(result);
 	}
 
+	#endregion
 }
