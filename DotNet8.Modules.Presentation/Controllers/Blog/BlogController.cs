@@ -52,6 +52,8 @@ public class BlogController : BaseController
 
 	#endregion
 
+	#region UpdateBlogAsync
+
 	[HttpPut("{id}")]
 	public async Task<IActionResult> UpdateBlogAsync([FromBody] BlogRequestModel requestModel, int id, CancellationToken cancellationToken)
 	{
@@ -60,5 +62,7 @@ public class BlogController : BaseController
 
 		return Content(result);
 	}
+
+	#endregion
 
 }
