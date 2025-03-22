@@ -12,3 +12,4 @@ global using DotNet8.Architecture.DTOs.Feature.Blog;
 global using DotNet8.Modules.Application.Features.Blog.CreateBlog;
 global using DotNet8.Modules.Application.Features.Blog.GetBlogById;
 global using DotNet8.Modules.Application.Features.Blog.UpdateBlog;
+global using DotNet8.Modules.Application.Features.Blog.PatchBlog;
