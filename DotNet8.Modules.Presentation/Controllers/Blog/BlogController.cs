@@ -1,4 +1,6 @@
-﻿namespace DotNet8.Modules.Presentation.Controllers.Blog;
+﻿using DotNet8.Modules.Application.Features.Blog.UpdateBlog;
+
+namespace DotNet8.Modules.Presentation.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -49,5 +51,14 @@ public class BlogController : BaseController
 	}
 
 	#endregion
+
+	[HttpPut("{id}")]
+	public async Task<IActionResult> UpdateBlogAsync([FromBody] BlogRequestModel requestModel, int id, CancellationToken cancellationToken)
+	{
+		var command = new UpdateBlogCommand(requestModel, id);
+		var result = await _mediator.Send(command,cancellationToken);
+
+		return Content(result);
+	}
 
 }
