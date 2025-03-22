@@ -113,4 +113,36 @@ public class BlogRepository : IBlogRepository
 
 	#endregion
 
+	public async Task<Result<BlogModel>> UpdateBlogAsync(BlogRequestModel blogRequest, int id, CancellationToken cancellationToken)
+	{
+		Result<BlogModel> result;
+
+		try
+		{
+			var blog = await _context.TblBlogs.FindAsync([id, cancellationToken], cancellationToken: cancellationToken);
+
+			if(blog is null)
+			{
+				result = Result<BlogModel>.NotFound();
+				goto result;
+			}
+
+			blog.BlogTitle = blogRequest.BlogTitle;
+			blog.BlogAuthor = blogRequest.BlogAuthor;
+			blog.BlogContent = blogRequest.BlogContent;
+
+			_context.TblBlogs.Update(blog);
+			await _context.SaveChangesAsync(cancellationToken);
+
+			result = Result<BlogModel>.UpdateSuccess();
+		}
+		catch (Exception ex)
+		{
+			result = Result<BlogModel>.Failure(ex);
+		}
+
+		result:
+		return result;
+	}
+
 }
