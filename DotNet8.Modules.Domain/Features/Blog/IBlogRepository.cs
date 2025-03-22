@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.Modules.Domain.Features.Blog;
 
+#region IBlogRepository
+
 public interface IBlogRepository
 {
 	Task<Result<BlogListModelV1>> GetBlogsAsync(int pageNo, int pageSize, CancellationToken cancellationToken);
@@ -7,3 +9,5 @@ public interface IBlogRepository
 	Task<Result<BlogModel>> CreateBlogAsync(BlogRequestModel blogRequest, CancellationToken cancellationToken);
 	Task<Result<BlogModel>> UpdateBlogAsync(BlogRequestModel blogRequest,int id , CancellationToken cancellationToken);
 }
+
+#endregion
