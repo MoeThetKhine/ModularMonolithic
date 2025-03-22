@@ -6,10 +6,14 @@ public class UpdateBlogCommand : IRequest<Result<BlogModel>>
 
 	public int BlogId { get; set; }
 
+	#region UpdateBlogCommand
+
 	public UpdateBlogCommand(BlogRequestModel requestModel, int blogId)
 	{
 		RequestModel = requestModel;
 		BlogId = blogId;
 	}
+
+	#endregion
 
 }
