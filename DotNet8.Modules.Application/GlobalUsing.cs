@@ -4,5 +4,4 @@ global using DotNet8.Architecture.Utils;
 global using DotNet8.Architecture.Utils.Resources;
 global using DotNet8.Modules.Domain.Features.Blog;
 global using MediatR;
-global using DotNet8.Modules.Application.Features.Blog.GetBlogById;
-
+global using DotNet8.Architecture.Shared;

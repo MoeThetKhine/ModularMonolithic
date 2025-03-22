@@ -1,6 +1,4 @@
-﻿using DotNet8.Architecture.Shared;
-
-namespace DotNet8.Modules.Application.Features.Blog.UpdateBlog;
+﻿namespace DotNet8.Modules.Application.Features.Blog.UpdateBlog;
 
 public class UpdateBlogCommandHandler : IRequestHandler<UpdateBlogCommand, Result<BlogModel>>
 {
